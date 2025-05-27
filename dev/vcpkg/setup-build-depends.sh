@@ -89,7 +89,7 @@ install_centos_7() {
     pip3 install --upgrade pip
 
     # Requires cmake >= 3.28.3
-    pip3 install cmake==3.28.3
+    pip3 install cmake==3.30.4
 
     # Requires git >= 2.7.4
     if [[ "$(git --version)" != "git version 2."* ]]; then
@@ -147,7 +147,7 @@ install_centos_8() {
     pip3 install --upgrade pip
 
     # Requires cmake >= 3.28.3
-    pip3 install cmake==3.28.3
+    pip3 install cmake==3.30.4
 
     dnf -y --enablerepo=powertools install autoconf-archive ninja-build
 

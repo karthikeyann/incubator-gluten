@@ -45,7 +45,7 @@ semver() {
 pip3 install --upgrade pip
 
 # cmake >= 3.28.3
-pip3 install cmake==3.28.3
+pip3 install cmake==3.30.4
 
 # git >= 2.7.4
 if [[ "$(git --version)" != "git version 2."* ]]; then
