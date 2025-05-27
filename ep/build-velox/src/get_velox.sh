@@ -16,8 +16,10 @@
 
 set -exu
 
-VELOX_REPO=https://github.com/oap-project/velox.git
-VELOX_BRANCH=2025_05_27
+# VELOX_REPO=https://github.com/oap-project/velox.git
+# VELOX_BRANCH=2025_05_27
+VELOX_REPO=https://github.com/rapidsai/velox.git
+VELOX_BRANCH=velox-cudf
 VELOX_HOME=""
 
 OS=`uname -s`
