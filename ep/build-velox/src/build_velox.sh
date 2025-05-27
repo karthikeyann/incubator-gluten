@@ -130,7 +130,7 @@ function compile {
   if [ $ENABLE_GPU == "ON" ]; then
     # the cuda default options are for Centos9 image from Meta
     echo "enable GPU support."
-    COMPILE_OPTION="$COMPILE_OPTION -DVELOX_ENABLE_GPU=ON -DVELOX_ENABLE_CUDF=ON -DCMAKE_CUDA_ARCHITECTURES=70 -DCMAKE_CUDA_COMPILER=/usr/local/cuda-12.8/bin/nvcc"
+    COMPILE_OPTION="$COMPILE_OPTION -DVELOX_ENABLE_GPU=ON -DVELOX_ENABLE_CUDF=ON -DCMAKE_CUDA_ARCHITECTURES=\"70-real;75-real;80-real;86-real;90-real;100-real;120-real\" -DCMAKE_CUDA_COMPILER=/usr/local/cuda-12.8/bin/nvcc"
   fi
   if [ -n "${GLUTEN_VCPKG_ENABLED:-}" ]; then
     COMPILE_OPTION="$COMPILE_OPTION -DVELOX_GFLAGS_TYPE=static"
