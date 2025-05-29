@@ -162,6 +162,7 @@ void VeloxBackend::init(
 
 #ifdef GLUTEN_ENABLE_GPU
   FLAGS_velox_cudf_debug = backendConf_->get<bool>(kDebugCudf, kDebugCudfDefault);
+  FLAGS_velox_cudf_memory_resource = backendConf_->get<std::string>(kCudfMR, kCudfMRDefault);
   if (backendConf_->get<bool>(kCudfEnabled, kCudfEnabledDefault)) {
     velox::cudf_velox::registerCudf();
   }

@@ -152,6 +152,8 @@ const std::string kCudfEnabled = "spark.gluten.sql.columnar.cudf";
 const bool kCudfEnabledDefault = "false";
 const std::string kDebugCudf = "spark.gluten.sql.debug.cudf";
 const bool kDebugCudfDefault = "false";
+const std::string kCudfMR = "spark.gluten.sql.mr.cudf";
+const std::string kCudfMRDefault = "async";
 #endif
 
 // Query trace
