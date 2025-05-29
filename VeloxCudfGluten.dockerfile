@@ -31,3 +31,8 @@ RUN source /opt/rh/gcc-toolset-11/enable && \
 RUN source /opt/rh/gcc-toolset-11/enable && \
     cd /incubator-gluten && \
     /incubator-gluten/dev/build-thirdparty.sh
+
+RUN wget https://archive.apache.org/dist/spark/spark-3.4.4/spark-3.4.4-bin-hadoop3.tgz && \
+    mkdir -p /spark && \
+    tar -xzf spark-3.4.4-bin-hadoop3.tgz -C /spark --strip-components=1 && \
+    rm spark-3.4.4-bin-hadoop3.tgz
